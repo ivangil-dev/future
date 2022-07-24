@@ -2912,3 +2912,105 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+
+/*helicopter*/
+
+.upToScroll {
+  bottom: 30px; right: -150px; position: fixed; z-index: 1001; background-color: transparent; height: auto; border: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.upToScroll.show {right:10px;}
+.upToScroll.buttonShow {bottom: 30px; right: 30px;}
+.upToScroll a.scrollToTop:before {content: ''; display: none;}
+.upToScroll a.scrollToTop {
+
+    background: transparent url('up1.png') no-repeat 50% 100%;
+    background-size: cover;
+    width: 146px;
+    height: 70px;
+    display: inline-block;
+
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {transform: translateY(0%) rotate3d(0,0,-1,0deg);}
+    50% {transform: translateY(8%) rotate3d(0,0,-1,3deg);}
+    100% {transform: translateY(0%) rotate3d(0,0,-1,0deg);}
+}
+@-webkit-keyframes floating {
+    0% {-webkit-transform: translateY(0%) rotate3d(0,0,-1,0deg);}
+    50% {-webkit-transform: translateY(8%) rotate3d(0,0,-1,3deg);}
+    100% {-webkit-transform: translateY(0%) rotate3d(0,0,-1,0deg);}
+}
+
+.upToScroll a.scrollToTop:before {
+    content: '';
+    display: block;
+    background: transparent url('up2.png') no-repeat 50% 100%; background-size: cover;
+    width: 52px; height: 14px;
+
+    animation-name: spining;
+    -webkit-animation-name: spining;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+@keyframes spining {
+    from {transform:rotateY(0deg);}
+    to {transform:rotateY(-360deg);}
+}
+@-webkit-keyframes spining {
+    from {-webkit-transform:rotateY(0deg);}
+    to {-webkit-transform:rotateY(-360deg);}
+}
+
+.upToScroll a.scrollToTop:after {
+    content: '';
+    display: block;
+    margin-top: 8px;
+    margin-left: 59px;
+    background: transparent url('up3.png') no-repeat 50% 100%; background-size: cover;
+    width: 8px; height: 30px;
+
+    animation-name: rotating;
+    -webkit-animation-name: rotating;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+    animation-timing-function:linear;
+    -webkit-animation-timing-function:linear;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+@keyframes rotating {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+@-webkit-keyframes rotating {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(-360deg);}
+}
+
+
+/*/helicopter*/
